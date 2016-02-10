@@ -1,48 +1,180 @@
 /*
-    REACT SYNTAX
-
-    var React = require('react');
-    var ReactDOM = require('react-dom');
-
-    var ReactRouter = require('react-router');
-    var Router = ReactRouter.Router;
-    var Route = ReactRouter.Route;
-
-    var createBrowserHistory = require('history/lib/createBrowserHistory');
-
-// npm install history - will load required code to do push state. 
-// react is set in a way that you call broweser history in function
-
-    var h = require('./helpers'); 
-
-// Firebase
-    var Rebase = require('re-base');
-    var base = Rebase.createClass('https://catchmarket.firebaseio.com/');
-
-//  Catalyst Communicate between 2 Components that don't have a child/parent relationship
-    https://github.com/tungd/react-catalyst
-
-   var Catalyst = require('react-catalyst');
-*/
-
-
-/*
   ES6 Modules using ES6 Classes
-*/  
+*/
 import React  from 'react';
 import ReactDOM  from 'react-dom';
-import { Router, Route } from 'react-router';
-import { createHistory } from 'history';
+import helpers from './helpers';
 
-import App from './components/App';
+
+var App = React.createClass({
+
+  getInitialState : function() {
+    return {
+      clippedFlowers: []
+    }
+  },
+
+  addClippedFlower : function(flower) {
+    this.setState({
+      clippedFlowers: this.state.clippedFlowers.concat(flower)
+    })
+  },
+
+  render : function() {
+    return (
+      <div className="row">
+        <div className="column">
+          <Header tagline="FLOWER COLLECTION"/>
+          <FlowerCollection flowers={this.state.clippedFlowers}/>
+        </div>
+        <div className="column">
+          <Header tagline="FlOWERS"/>
+          <FlowerClipper addClippedFlower={this.addClippedFlower}/>
+        </div>
+      </div>
+    )
+  }
+});
 
 /*
-  Routes
+  Header
 */
-var routes = (
-  <Router history={createHistory()}>
-    <Route path="/" component={App} />
-  </Router>
-  )
+var Header = React.createClass({
+    propTypes : {
+      tagline: React.PropTypes.string
+    },
+    render : function( ) {
+        return (
+          <header className="top">
+            <h3 className='tagline'>{this.props.tagline}</h3>
+          </header>
+       )
+    }
+});
 
-ReactDOM.render(routes, document.querySelector('#main'));
+
+
+/*
+  Flower Collection
+  all flowers user has selected, this needs to be saved
+*/
+
+var FlowerCollection = React.createClass({
+  propTypes: {
+    flowers: React.PropTypes.arrayOf(React.PropTypes.object).isRequired
+  },
+  render : function() {
+    return (
+      <div className='users-flower-collection'>
+        <div className='column'>
+          {
+            this.props.flowers.map((flower, i) =>
+              <div key={i}>
+                <Flower flower={flower}/>
+              </div>
+            )
+          }
+        </div>
+      </div>
+    )
+  }
+});
+
+
+/*
+  FlowerClipper
+  This will let us make <FlowerClipper/>
+*/
+
+var FlowerClipper = React.createClass({
+
+  propTypes: {
+    addClippedFlower: React.PropTypes.func.isRequired
+  },
+
+  getInitialState : function() {
+    return {
+      flower : helpers.getFlower()
+    };
+  },
+
+  updateWithNewRandomFlower : function() {
+    this.setState({
+      flower : helpers.getFlower()
+    });
+  },
+
+  addFlowerToCollection: function() {
+    this.props.addClippedFlower(this.state.flower);
+  },
+
+  render : function() {
+    {/* var name='Jess'; */}
+    return (
+      <div className='flower-selector'>
+        <Flower flower={this.state.flower}/>
+        <div className='button-row'>
+          <button className="addTo" onClick={this.addFlowerToCollection}>
+            + Collect
+          </button>
+          <button className="update" onClick={this.updateWithNewRandomFlower}>
+            Refresh
+          </button>
+        </div>
+      </div>
+    );
+  }
+});
+
+
+var Flower = React.createClass({
+  propTypes: {
+    flower: React.PropTypes.object.isRequired
+  },
+  render: function() {
+    return (
+      <div>
+        <img
+          src={this.props.flower.image}
+          style={{height: 250, width: 500}}
+        />
+        <p>{this.props.flower.name}</p>
+        <p>{this.props.flower.desc}</p>
+      </div>
+    );
+  }
+});
+
+
+ReactDOM.render(<App/>, document.querySelector('#main'));
+
+
+{/*
+    I want a SucculentClipper -
+    Do I create another Clipper?
+    Can I re-use this one? Thinking of layout see paper notes to explain
+
+    Is it better to have Clippers side by side or Separate?
+
+    Succulent Collection
+    all succulents user has selected this needs to be saved
+
+
+    var SucculentCollection = React.createClass({
+      propTypes: {
+      count: React.PropTypes.object.isRequired
+      },
+      render : function() {
+        return (
+          <div className='users-succulent-collection'>
+            <h2>Your Saved Succulents</h2>
+            <div className='row'>
+              <div className='col-md-4'></div>
+              <div className='col-md-4'></div>
+              <div className='col-md-4'></div>
+            </div>
+          </div>
+        )
+      }
+    });
+*/}

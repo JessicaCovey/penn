@@ -47,12 +47,12 @@ gulp.task('images',function(){
   Browser Sync
 */
 gulp.task('browser-sync', function() {
-    browserSync({
-        // we need to disable clicks and forms for when we test multiple rooms
-        server : {},
-        middleware : [ historyApiFallback() ],
-        ghostMode: false
-    });
+  browserSync({
+    // we need to disable clicks and forms for when we test multiple rooms
+    server : {},
+    middleware : [ historyApiFallback() ],
+    ghostMode: false
+  });
 });
 
 function handleErrors() {

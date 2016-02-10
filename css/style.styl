@@ -1,3 +1,116 @@
  // Import all partials
-@require './_*.styl'
 
+body
+  background-color #FFF
+
+.row
+  display: flex
+  flex-flow: row nowrap
+  flex: 1
+
+.column
+  display: flex
+  flex-flow: column nowrap
+  flex: 1
+
+header.top
+  text-align center
+  h1
+    font-size 4rem
+    line-height 1.5
+    display flex
+    justify-content center
+
+  h3
+    margin 0
+    font-size 2rem
+    color pink
+    position relative
+    display inline-block
+    span
+      background white
+      position relative
+      z-index 2
+      padding-left 1rem
+      padding-right 1rem
+    &:before, &:after
+      display block
+      z-index 1
+      background black
+      position absolute
+      width 130%
+      height 1px
+      content ''
+      top 5px
+      margin-left -15%
+    &:after
+      top auto
+      bottom 7px
+
+
+.flower-of-the-day
+  display flex
+  height 90vh
+  max-width: 1500px
+  margin 0 auto
+  margin-top 5vh
+  perspective: 1000;
+  transform-style preserve-3d
+  & > *
+    flex 1 4 auto
+    padding 2rem
+    border 1px lighten(black,10%)
+    position relative
+    background white
+    transition all 0.3s
+    box-shadow 0px 5px 5px rgba(0,0,0,0.1)
+    overflow scroll
+
+  p
+    margin 0
+    font-size 1.8rem
+  .flower-name
+    margin 0
+    display flex
+    justify-content space-between
+    align-items center
+  .flower.desc
+    font-size 1.4rem
+    justify-content flex-end
+
+// Flower Selector
+  .flower-selector
+    background white
+    max-width 600px
+    margin 50px auto
+    padding 2rem
+    text-align center
+    font-size 2rem
+    text-transform uppercase
+    font-family sans-serif
+
+    button
+      width 90px
+      height 90px
+      border-radius 100%
+      background #3D5AFE
+      border none
+      outline none
+      font-size 12px
+      font-weight 600
+      box-shadow 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+      margin 0px 80px
+      text-transform uppercase
+      color #fff
+      position relative
+      z-index 2
+
+    //  &.addTo
+
+
+
+    //  &[disabled]
+
+    //  &:hover
+
+    //  &:hover, &:focus
