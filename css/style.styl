@@ -1,7 +1,23 @@
  // Import all partials
 
+ @font-face {
+     font-family: 'chapmanmedium';
+     src: url('fonts/chapman-webfont.eot');
+     src: url('fonts/chapman-webfont.eot?#iefix') format('embedded-opentype'),
+          url('fonts/chapman-webfont.woff2') format('woff2'),
+          url('fonts/chapman-webfont.woff') format('woff'),
+          url('fonts/chapman-webfont.ttf') format('truetype'),
+          url('fonts/chapman-webfont.svg#chapmanmedium') format('svg');
+     font-weight: normal;
+     font-style: normal;
+ }
+
+
 body
   background-color #FFF
+
+  p
+    font-size 1rem
 
 .row
   display: flex
@@ -15,89 +31,46 @@ body
 
 header.top
   text-align center
+  font-family 'chapmanmedium'
   h1
     font-size 4rem
     line-height 1.5
     display flex
     justify-content center
-
   h3
     margin 0
     font-size 2rem
-    color pink
+    font-weight 500px
+    color #D21F9C
     position relative
-    display inline-block
-    span
-      background white
-      position relative
-      z-index 2
-      padding-left 1rem
-      padding-right 1rem
-    &:before, &:after
-      display block
-      z-index 1
-      background black
-      position absolute
-      width 130%
-      height 1px
-      content ''
-      top 5px
-      margin-left -15%
-    &:after
-      top auto
-      bottom 7px
-
-
-.flower-of-the-day
-  display flex
-  height 90vh
-  max-width: 1500px
-  margin 0 auto
-  margin-top 5vh
-  perspective: 1000;
-  transform-style preserve-3d
-  & > *
-    flex 1 4 auto
-    padding 2rem
-    border 1px lighten(black,10%)
-    position relative
-    background white
-    transition all 0.3s
-    box-shadow 0px 5px 5px rgba(0,0,0,0.1)
-    overflow scroll
-
-  p
-    margin 0
-    font-size 1.8rem
-  .flower-name
-    margin 0
+    line-height 1.5
     display flex
-    justify-content space-between
-    align-items center
-  .flower.desc
-    font-size 1.4rem
-    justify-content flex-end
+    display inline-block
+
 
 // Flower Selector
+
   .flower-selector
-    background white
     max-width 600px
-    margin 50px auto
-    padding 2rem
     text-align center
-    font-size 2rem
-    text-transform uppercase
-    font-family sans-serif
+    font-size 1rem
+    text-transform lowercase
+    font-family arial
+
+    .button-row
+      margin-top 60px
 
     button
       width 90px
       height 90px
       border-radius 100%
-      background #3D5AFE
+      background #FF1744
       border none
       outline none
-      font-size 12px
-      font-weight 600
+      font-size 2rem
+      font-weight bold
+      letter-spacing 0.5px
+      font-family 'chapmanmedium'
       box-shadow 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
       margin 0px 80px
       text-transform uppercase

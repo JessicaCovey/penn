@@ -38,6 +38,7 @@ var App = React.createClass({
 
 /*
   Header
+
 */
 var Header = React.createClass({
     propTypes : {
@@ -46,7 +47,7 @@ var Header = React.createClass({
     render : function( ) {
         return (
           <header className="top">
-            <h3 className='tagline'>{this.props.tagline}</h3>
+            <h1 className='tagline'>{this.props.tagline}</h1>
           </header>
        )
     }
@@ -56,7 +57,7 @@ var Header = React.createClass({
 
 /*
   Flower Collection
-  all flowers user has selected, this needs to be saved
+  all the flowers user has collected, this needs to be saved
 */
 
 var FlowerCollection = React.createClass({
@@ -83,7 +84,7 @@ var FlowerCollection = React.createClass({
 
 /*
   FlowerClipper
-  This will let us make <FlowerClipper/>
+  This will let us refresh with new image and add image to our collection
 */
 
 var FlowerClipper = React.createClass({
@@ -109,13 +110,12 @@ var FlowerClipper = React.createClass({
   },
 
   render : function() {
-    {/* var name='Jess'; */}
     return (
       <div className='flower-selector'>
         <Flower flower={this.state.flower}/>
         <div className='button-row'>
           <button className="addTo" onClick={this.addFlowerToCollection}>
-            + Collect
+            Collect
           </button>
           <button className="update" onClick={this.updateWithNewRandomFlower}>
             Refresh
@@ -127,6 +127,9 @@ var FlowerClipper = React.createClass({
 });
 
 
+/*
+  This will let give us our flower image and it's details
+*/
 var Flower = React.createClass({
   propTypes: {
     flower: React.PropTypes.object.isRequired

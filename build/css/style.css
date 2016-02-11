@@ -1,5 +1,15 @@
+@font-face {
+  font-family: 'chapmanmedium';
+  src: url("fonts/chapman-webfont.eot");
+  src: url("fonts/chapman-webfont.eot?#iefix") format('embedded-opentype'), url("fonts/chapman-webfont.woff2") format('woff2'), url("fonts/chapman-webfont.woff") format('woff'), url("fonts/chapman-webfont.ttf") format('truetype'), url("fonts/chapman-webfont.svg#chapmanmedium") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   background-color: #fff;
+}
+body p {
+  font-size: 1rem;
 }
 .row {
   display: -webkit-box;
@@ -29,6 +39,7 @@ body {
 }
 header.top {
   text-align: center;
+  font-family: 'chapmanmedium';
 }
 header.top h1 {
   font-size: 4rem;
@@ -45,106 +56,37 @@ header.top h1 {
 header.top h3 {
   margin: 0;
   font-size: 2rem;
-  color: #ffc0cb;
+  font-weight: 500px;
+  color: #d21f9c;
   position: relative;
+  line-height: 1.5;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   display: inline-block;
 }
-header.top h3 span {
-  background: #fff;
-  position: relative;
-  z-index: 2;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-header.top h3:before,
-header.top h3:after {
-  display: block;
-  z-index: 1;
-  background: #000;
-  position: absolute;
-  width: 130%;
-  height: 1px;
-  content: '';
-  top: 5px;
-  margin-left: -15%;
-}
-header.top h3:after {
-  top: auto;
-  bottom: 7px;
-}
-.flower-of-the-day {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 90vh;
-  max-width: 1500px;
-  margin: 0 auto;
-  margin-top: 5vh;
-  -webkit-perspective: 1000;
-          perspective: 1000;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-}
-.flower-of-the-day > * {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 4 auto;
-      -ms-flex: 1 4 auto;
-          flex: 1 4 auto;
-  padding: 2rem;
-  border: 1px #1a1a1a;
-  position: relative;
-  background: #fff;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  box-shadow: 0px 5px 5px rgba(0,0,0,0.1);
-  overflow: scroll;
-}
-.flower-of-the-day p {
-  margin: 0;
-  font-size: 1.8rem;
-}
-.flower-of-the-day .flower-name {
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.flower-of-the-day .flower.desc {
-  font-size: 1.4rem;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
 .flower-selector {
-  background: #fff;
   max-width: 600px;
-  margin: 50px auto;
-  padding: 2rem;
   text-align: center;
-  font-size: 2rem;
-  text-transform: uppercase;
-  font-family: sans-serif;
+  font-size: 1rem;
+  text-transform: lowercase;
+  font-family: arial;
+}
+.flower-selector .button-row {
+  margin-top: 60px;
 }
 .flower-selector button {
   width: 90px;
   height: 90px;
   border-radius: 100%;
-  background: #3d5afe;
+  background: #ff1744;
   border: none;
   outline: none;
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  font-family: 'chapmanmedium';
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   margin: 0px 80px;
   text-transform: uppercase;

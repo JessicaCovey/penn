@@ -1,170 +1,206 @@
 // This is just some sample data so you don't have to think of your own!
 module.exports = [
   {
-    name : 'poppy',
+    name : 'Irving Penn',
     image : '/images/ip1.jpg',
-    desc : 'Irving Penn'
+    desc : 'Flowers (Published 1980)'
   },
 
   {
-    name : 'iris',
+    name : 'Irving Penn',
     image : '/images/ip2.jpg',
-    desc : 'Irving Penn'
+    desc : 'Flowers (Published 1980)'
   },
 
   {
-    name : 'Peonie',
+    name : 'Irving Penn',
     image : '/images/ip3.jpg',
-    desc : 'Irving Penn'
+    desc : 'Flowers (Published 1980)'
   },
 
   {
-    name : 'White Poppy',
+    name : 'Irving Penn',
     image : '/images/ip4.jpg',
-    desc : 'Irving Penn'
+    desc : 'Flowers (Published 1980)'
   },
 
   {
-    name : '',
+    name : 'Irving Penn',
     image : '/images/ip5.jpg',
-    desc : 'Irving Penn'
+    desc : 'Flowers (Published 1980)'
   },
 
   {
-    name : '',
+    name : 'Irving Penn',
     image : '/images/ip6.jpg',
-    desc : 'Irving Penn'
+    desc : 'Flowers (Published 1980)'
   },
 
   {
-    name : 'rose',
+    name : 'Irving Penn',
     image : '/images/ip7.jpg',
-    desc : 'Irving Penn'
+    desc : 'Flowers (Published 1980)'
   },
 
   {
-    name : 'Dried Roses',
+    name : 'Irving Penn',
     image : '/images/ip8.jpg',
-    desc : 'Irving Penn'
+    desc : 'Flowers (Published 1980)'
   },
 
   {
-    name : 'Pink',
+    name : 'Irving Penn',
     image : '/images/ip9.jpg',
-    desc : 'Irving Penn'
+    desc : 'Flowers (Published 1980)'
   },
 
   {
-    name : '',
+    name : 'Irving Penn',
     image : '/images/ip10.jpg',
     desc : 'Irving Penn'
   },
 
   {
-    name : '',
+    name : 'Irving Penn',
     image : '/images/ip11.jpg',
-    desc : 'Irving Penn'
+    desc : 'Flowers (Published 1980)'
   },
 
   {
-    name : '',
+    name : 'Irving Penn',
     image : '/images/ip12.jpg',
-    desc : 'Irving Penn'
+    desc : 'Flowers (Published 1980)'
   },
 
   {
-    name : 'Peonies',
+    name : 'Irving Penn',
     image : '/images/ip13.jpg',
-    desc : 'Irving Penn'
+    desc : 'Flowers (Published 1980)'
   },
 
   {
-    name : '',
+    name : 'Irving Penn',
     image : '/images/ip14.jpg',
-    desc : 'Irving Penn'
+    desc : 'Flowers (Published 1980)'
   },
 
   {
-    name : 'Lilly',
+    name : 'Irving Penn',
     image : '/images/ip15.jpg',
-    desc : 'Irving Penn'
+    desc : 'Flowers (Published 1980)'
   },
 
   {
-    name : '',
+    name : 'Irving Penn',
     image : '/images/ip16.jpg',
-    desc : 'Irving Penn'
+    desc : 'Flowers (Published 1980)'
   },
 
   {
-    name : 'Dried Poppy',
+    name : 'Irving Penn',
     image : '/images/ip17.jpg',
-    desc : 'Irving Penn'
+    desc : 'Flowers (Published 1980)'
   },
 
   {
-    name : '',
+    name : 'Irving Penn',
     image : '/images/ip18.jpg',
-    desc : 'Irving Penn'
+    desc : 'Flowers (Published 1980)'
   },
 
   {
-    name : '',
+    name : 'Irving Penn',
     image : '/images/ip19.jpg',
-    desc : 'Irving Penn'
+    desc : 'Flowers (Published 1980)'
   },
 
   {
-    name : 'Dried Petal and Stem',
+    name : 'Irving Penn',
     image : '/images/ip20.jpg',
-    desc : 'Irving Penn'
+    desc : 'Flowers (Published 1980)'
   },
 
   {
-    name : '',
+    name : 'Irving Penn',
     image : '/images/ip21.jpg',
-    desc : 'Irving Penn'
+    desc : 'Flowers (Published 1980)'
   },
 
   {
-    name : '',
+    name : 'Irving Penn',
     image : '/images/ip22.jpg',
-    desc : 'Irving Penn'
+    desc : 'Flowers (Published 1980)'
   },
 
   {
-    name : '',
+    name : 'Irving Penn',
     image : '/images/ip23.jpg',
-    desc : 'Irving Penn'
+    desc : 'Flowers (Published 1980)'
   },
 
   {
-    name : '',
+    name : 'Irving Penn',
     image : '/images/ip24.jpg',
-    desc : 'Irving Penn'
+    desc : 'Flowers (Published 1980)'
   },
 
   {
-    name : '',
+    name : 'Irving Penn',
     image : '/images/ip25.jpg',
-    desc : 'Irving Penn'
+    desc : 'Flowers (Published 1980)'
   },
 
   {
-    name : '',
+    name : 'Irving Penn',
     image : '/images/ip26.jpg',
-    desc : 'Irving Penn'
+    desc : 'Flowers (Published 1980)'
   },
 
   {
-    name : 'Dried Daisy',
+    name : 'Irving Penn',
     image : '/images/ip27.jpg',
-    desc : 'Irving Penn'
+    desc : 'Flowers (Published 1980)'
   },
 
   {
-    name : '',
+    name : 'Irving Penn',
     image : '/images/ip28.jpg',
-    desc : ''
+    desc : 'Flowers (Published 1980)'
   },
+
+  {
+    name : 'Irving Penn',
+    image : '/images/ip29.jpg',
+    desc : 'Flowers (Published 1980)'
+  },
+
+  {
+    name : 'Irving Penn',
+    image : '/images/ip30.jpg',
+    desc : 'Flowers (Published 1980)'
+  },
+
+  {
+    name : 'Irving Penn',
+    image : '/images/ip31.jpg',
+    desc : 'Flowers (Published 1980)'
+  },
+
+  {
+    name : 'Irving Penn',
+    image : '/images/ip32.jpg',
+    desc : 'Flowers (Published 1980)'
+  },
+
+  {
+    name : 'Irving Penn',
+    image : '/images/ip33.jpg',
+    desc : 'Flowers (Published 1980)'
+  },
+
+  {
+    name : 'Irving Penn',
+    image : '/images/ip33.jpg',
+    desc : 'Flowers (Published 1980)'
+  }
 ];
