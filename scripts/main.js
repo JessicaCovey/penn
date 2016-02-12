@@ -20,12 +20,25 @@ var App = React.createClass({
     })
   },
 
+  removeClippedFlower : function(flower) {
+    var index = this.state.clippedFlowers.indexOf(flower);
+
+    if (index >= 0) {
+      var flowers = this.state.clippedFlowers.slice(0);
+      flowers.splice(index, 1);
+      this.setState({clippedFlowers: flowers});
+    }
+  },
+
   render : function() {
     return (
       <div className="row">
         <div className="column">
           <Header tagline="FLOWER COLLECTION"/>
-          <FlowerCollection flowers={this.state.clippedFlowers}/>
+          <FlowerCollection
+            flowers={this.state.clippedFlowers}
+            removeClippedFlower={this.removeClippedFlower}
+          />
         </div>
         <div className="column">
           <Header tagline="FlOWERS"/>
@@ -62,8 +75,10 @@ var Header = React.createClass({
 
 var FlowerCollection = React.createClass({
   propTypes: {
-    flowers: React.PropTypes.arrayOf(React.PropTypes.object).isRequired
+    flowers: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
+    removeClippedFlower: React.PropTypes.func.isRequired
   },
+
   render : function() {
     return (
       <div className='users-flower-collection'>
@@ -72,6 +87,12 @@ var FlowerCollection = React.createClass({
             this.props.flowers.map((flower, i) =>
               <div key={i}>
                 <Flower flower={flower}/>
+                <button
+                  className='removeFrom'
+                  onClick={() => this.props.removeClippedFlower(flower)}
+                >
+                  remove
+                </button>
               </div>
             )
           }
@@ -80,6 +101,10 @@ var FlowerCollection = React.createClass({
     )
   }
 });
+
+/*
+  Remove flower from Collection
+*/
 
 
 /*
